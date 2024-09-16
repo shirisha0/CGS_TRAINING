@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Background Color Changer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+        }
+
+        .color-picker-container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container color-picker-container">
+        <h2 class="text-center mb-4">Dynamic Background Color Changer</h2>
+
+        <div class="form-group">
+            <label for="colorPicker">Choose Background Color:</label>
+            <input type="color" class="form-control" id="colorPicker" value="#ffffff">
+        </div>
+
+        <button type="button" class="btn btn-primary btn-block" onclick="changeBackgroundColor()">Change Background Color</button>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    
+
+    <!-- JavaScript for dynamic background color change -->
+    <script>
+        function changeBackgroundColor() {
+            const selectedColor = document.getElementById('colorPicker').value;
+            document.body.style.backgroundColor = selectedColor;
+        }
+    </script>
+</body>
+
+</html>
