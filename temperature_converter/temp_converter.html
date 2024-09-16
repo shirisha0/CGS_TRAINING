@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(240, 232, 232);
+        }
+
+        .converter-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: rgb(194, 143, 207);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container converter-container">
+        <h2 class="text-center mb-4">Temperature Converter</h2>
+
+        <form id="converterForm">
+            <div class="form-group">
+                <label for="inputTemperature">Enter Temperature:</label>
+                <input type="number" class="form-control" id="inputTemperature" placeholder="Enter value" required>
+                <div class="error">
+                    <p id="error" style="color: red;"></p>
+                </div>
+            </div>
+
+            <div class="form-group d-flex">
+                <div>
+                <label for="fromUnit">Convert from:</label>
+                <select class="form-control" id="fromUnit">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+            <div class="ml-5">
+                <label for="toUnit">Convert to:</label>
+                <select class="form-control" id="toUnit">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+            </div>
+
+           
+             <div class="text-center">
+            <button type="button" class="btn btn-primary btn-block" onclick="convertTemperature()">Convert</button>
+             </div>
+        </form>
+
+        <div class="result mt-4">
+            <input  class="form-control" id="resultText" placeholder="Display Temperature">
+        </div>
+    </div>
+
+    
+
+    <!-- JavaScript for temperature conversion -->
+    <script>
+        function convertTemperature() {
+            const inputTemperature = parseFloat(document.getElementById('inputTemperature').value);
+            const fromUnit = document.getElementById('fromUnit').value;
+            const toUnit = document.getElementById('toUnit').value;
+
+            if (isNaN(inputTemperature)) {
+                document.getElementById('error').innerText = "Please enter a valid temperature.";
+                return;
+            }
+
+            let result;
+
+            // Conversion logic
+            if (fromUnit === toUnit) {
+                result = inputTemperature; // No conversion needed
+            } else if (fromUnit === "Celsius" && toUnit === "Fahrenheit") {
+                result = (inputTemperature * 9/5) + 32;
+            } else if (fromUnit === "Celsius" && toUnit === "Kelvin") {
+                result = inputTemperature + 273.15;
+            } else if (fromUnit === "Fahrenheit" && toUnit === "Celsius") {
+                result = (inputTemperature - 32) * 5/9;
+            } else if (fromUnit === "Fahrenheit" && toUnit === "Kelvin") {
+                result = (inputTemperature - 32) * 5/9 + 273.15;
+            } else if (fromUnit === "Kelvin" && toUnit === "Celsius") {
+                result = inputTemperature - 273.15;
+            } else if (fromUnit === "Kelvin" && toUnit === "Fahrenheit") {
+                result = (inputTemperature - 273.15) * 9/5 + 32;
+            }
+
+            document.getElementById('resultText').value = ` ${result.toFixed(2)} °${toUnit}`;
+        }
+    </script>
+</body>
+
+</html>
