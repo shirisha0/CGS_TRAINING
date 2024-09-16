@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Compliance Tasks</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .card-title {
+            font-size: 1.25rem;
+        }
+        .task-status {
+            font-weight: bold;
+        }
+        nav{
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar text-white p-3">
+                <h2 class="text-center">Employee Dashboard</h2>
+                <hr>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link text-white active" href="employee_dash_new.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="emp_compliance.html">Compliance Tasks</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="emp_audits.html">My Audits</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="emp_policy.html">Policy Updates</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="emp_profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="cms_login.html">Logout</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- Header -->
+                <header class="d-flex justify-content-between align-items-center py-4">
+                    <div><h1>Compliance Tasks</h1>
+                    <p>Manage your compliance tasks and track their progress.</p></div>
+                    <div>
+                        <img src="profile.jpg" alt="CMS Logo" height="50px" style="border-radius: 50px;"><br>
+                        <button class="btn btn-default p-2"><a href="emp_profile.html" style="text-decoration: none ; color:black" >profile</a></button>
+                    </div>
+                </header>
+
+                <!-- Filter and Search -->
+                <div class="mb-4">
+                    <form class="row g-3">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="searchTask" placeholder="Search tasks">
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select" id="filterStatus">
+                                <option selected>Filter by Status</option>
+                                <option value="all">All</option>
+                                <option value="pending">Pending</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-primary">Apply Filters</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Task List -->
+                <section>
+                    <h2>My Tasks</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Task Name</th>
+                                <th>Description</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tasksTableBody">
+                            <!-- JavaScript will populate this -->
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Simulated data fetching
+            const tasksData = [
+                { id: 1, name: "Complete Annual Training", description: "Complete the annual compliance training module.", dueDate: "2024-09-30", status: "Pending" },
+                { id: 2, name: "Submit Safety Report", description: "Submit the quarterly safety compliance report.", dueDate: "2024-10-10", status: "Completed" },
+                { id: 3, name: "Review Policy Updates", description: "Review and acknowledge recent policy updates.", dueDate: "2024-09-20", status: "Pending" }
+            ];
+
+            // Populate the tasks table
+            const tasksTableBody = document.getElementById('tasksTableBody');
+            tasksData.forEach(task => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${task.id}</td>
+                    <td>${task.name}</td>
+                    <td>${task.description}</td>
+                    <td>${task.dueDate}</td>
+                    <td class="task-status">${task.status}</td>
+                    <td><a href="#" class="btn btn-sm btn-info">View</a></td>
+                `;
+                tasksTableBody.appendChild(row);
+            });
+        });
+    </script>
+</body>
+</html>

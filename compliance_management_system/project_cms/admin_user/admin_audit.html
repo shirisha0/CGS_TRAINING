@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Management - Compliance Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        nav{
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar text-white p-3">
+                <h2 class="text-center">Admin Dashboard</h2>
+                <hr>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link text-white" href="admin.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admin_manage_user.html">Manage Users</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admin_compliance.html">Compliance Policies</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admin_audit.html">Audit Management</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admin_reports.html">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admin_setting.html">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="cms_login.html">Logout</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- Header -->
+                <header class="py-4">
+                    <h1>Audit Management</h1>
+                    <p>View, Schedule, and Track Compliance Audits</p>
+                </header>
+
+                <!-- Schedule New Audit Button -->
+                <div class="mb-4">
+                    <a href="#" class="btn btn-primary">Schedule New Audit</a>
+                </div>
+
+                <!-- Audit List Section -->
+                <section>
+                    <h2>Audit List</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Audit Name</th>
+                                <th>Department</th>
+                                <th>Date Scheduled</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>HR Department Audit</td>
+                                <td>Human Resources</td>
+                                <td>2024-09-10</td>
+                                <td><span class="badge bg-warning">In Progress</span></td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-secondary">View</a>
+                                    <a href="#" class="btn btn-sm btn-danger">Cancel</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Finance Audit</td>
+                                <td>Finance</td>
+                                <td>2024-08-25</td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-secondary">View</a>
+                                    <a href="#" class="btn btn-sm btn-danger">Cancel</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>IT Security Audit</td>
+                                <td>IT</td>
+                                <td>2024-09-18</td>
+                                <td><span class="badge bg-primary">Scheduled</span></td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-secondary">View</a>
+                                    <a href="#" class="btn btn-sm btn-danger">Cancel</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

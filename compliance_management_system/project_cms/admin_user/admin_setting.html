@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Admin</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        nav{
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar text-white p-3" style="height: 100vh; position: sticky; top: 0; overflow-y: scroll;">
+                <h2 class="text-center">Admin Dashboard</h2>
+                <hr>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link text-white" href="admin.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admin_manage_user.html">Manage Users</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admin_compliance.html">Compliance Policies</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admin_audit.html">Audit Management</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admin_reports.html">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admin_setting.html">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="cms_login.html">Logout</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- Header -->
+                <header class="py-4">
+                    <h1>Settings</h1>
+                    <p>Configure system settings for the Compliance Management System.</p>
+                </header>
+
+                <!-- General Settings -->
+                <section class="mb-5">
+                    <h2>General Settings</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="siteName" class="form-label">Site Name</label>
+                            <input type="text" class="form-control" id="siteName" value="Compliance System" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="siteEmail" class="form-label">Site Email</label>
+                            <input type="email" class="form-control" id="siteEmail" value="admin@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="siteTimezone" class="form-label">Timezone</label>
+                            <select class="form-select" id="siteTimezone" required>
+                                <option selected>Choose Timezone</option>
+                                <option value="UTC">UTC</option>
+                                <option value="GMT">GMT</option>
+                                <option value="PST">PST</option>
+                                <!-- Add more timezones as needed -->
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </section>
+
+                <!-- User Management Settings -->
+                <section class="mb-5">
+                    <h2>User Management</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="userRole" class="form-label">Default User Role</label>
+                            <select class="form-select" id="userRole" required>
+                                <option selected>Choose Role</option>
+                                <option value="Admin">Admin</option>
+                                <option value="User">User</option>
+                                <option value="Manager">Manager</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passwordPolicy" class="form-label">Password Policy</label>
+                            <input type="text" class="form-control" id="passwordPolicy" value="Minimum 8 characters, including one uppercase letter, one number, and one special character." required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Settings</button>
+                    </form>
+                </section>
+
+                <!-- Security Settings -->
+                <section class="mb-5">
+                    <h2>Security Settings</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="twoFactorAuth" class="form-label">Two-Factor Authentication</label>
+                            <select class="form-select" id="twoFactorAuth" required>
+                                <option selected>Enable/Disable</option>
+                                <option value="enabled">Enabled</option>
+                                <option value="disabled">Disabled</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sessionTimeout" class="form-label">Session Timeout (minutes)</label>
+                            <input type="number" class="form-control" id="sessionTimeout" value="30" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Security Settings</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
