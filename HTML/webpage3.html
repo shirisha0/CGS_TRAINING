@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+<style>
+
+    
+    form.example input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 30%;
+    }
+    
+    form.example button {
+      float:left;
+      width: 5%;
+      padding: 10px;
+      background:none;
+      color: rgb(179, 171, 171);
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+    }
+    
+    form.example button:hover {
+      background: #444546;
+    }
+    
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    h3{
+      margin-top:10%;
+      color:white;
+    }
+    .form-center{
+      display: flex;
+      justify-content: center;
+    }
+    input{
+       border-style: hidden;
+       border-radius: 25px;
+       margin:4px;
+       height:30px;
+       padding-left:7px;
+       color: darkgray;
+      
+    }
+    </style>
+</head>
+<body style="background-image:url('image3.jpeg'); background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
+    <form class="example" action="action_page.php">
+        <button type="submit"style="right:50%;"><i class="fa fa-search"></i></button>
+      <input type="text" value="search" style="background: none;"><br>
+      <h3 style="text-align: center;">From the sky-high opportunity strikes now!</h3>
+    <p style="text-align: center;color: white">subscribe and be the first one to get the product</p><br>
+      </form>
+      <div class="form-center">
+      <form><input type="text" id="name" value="Name">
+    <input type="text" id="lname" value="Lastname"><br>
+    <input type="text" id="email" value="E-mail" style="width:100%;"><br>
+    <input type="submit" value="Subscribe Now" style="background-color:aqua; width:100%">
+      </form>
+      </div>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+     #step2,#step3,#step4{
+        display: None;
+     }
+
+     #btn2,#btn3,#btn4{
+        display: None;
+     }
+    </style>
+
+    
+</head>
+<body>
+    <div class="container-fluid my-5" style="width: 70%;">
+    
+       <form>
+        <div id="step1">
+            <label for="username">Username :</label>
+            <input type="text" id="username" class="form-control"  required >
+            <p id="error1" style="color: red;"></p>
+            <button type="button" id="btn1" class="btn  btn-info my-2" >next</button>
+        </div>
+        <div id="step2" >
+            <label for="email">Email</label>
+            <input type="Email" id="email" class="form-control"  required>
+            <p id="error1" style="color: red;"></p>
+            <button type="button" id="btn2" class="btn  btn-info my-2">next</button>
+        </div>
+         <div id="step3" >
+            <label for="password">PassWord</label>
+            <input type="password" id="password" class="form-control" required>
+            <p id="error1" style="color: red;"></p>
+            <button type="button" id="btn3" class="btn  btn-info my-2">next</button>
+        </div>
+        <div id="step4" >
+            <label for="cp">Confrim-PassWord</label>
+            <input type="password" id="cp" class="form-control"  required>
+            <p id="error1" style="color: red;"></p>
+            <button type="button" id="btn4" class="btn  btn-info my-2">Submit</button>
+        </div>
+       </form>
+        
+
+    </div>
+
+    <script>
+        var name=document.getElementById("pname")
+        var username=document.getElementById("username")
+        var email=document.getElementById("email")
+        var pass=document.getElementById("password")
+        var cpass=document.getElementById("cp")
+        var btn1=document.getElementById("btn1")
+        var btn2=document.getElementById("btn2")
+        var btn3=document.getElementById("btn3")
+        var btn4=document.getElementById("btn4")
+        var error1=document.getElementById("error1")
+        var error2=document.getElementById("error2")
+        var error3=document.getElementById("error2")
+        var error4=document.getElementById("error3")
+        btn1.addEventListener("click",display1)
+        btn2.addEventListener("click",display2)
+        btn3.addEventListener("click",display3)
+        btn3.addEventListener("click",display3)
+        btn4.addEventListener("click",display4)
+        function display1(){
+            if(username.value){
+                step1.style.display = "block";  
+                step2.style.display = "block"; 
+                btn1.style.display="none"
+                btn2.style.display="block"
+            
+            } else {
+                error1.innerText="Please enter your username";
+            }
+        }
+        function display2(){
+            if(username.value){
+                step2.style.display = "block";  
+                step3.style.display = "block"; 
+                btn2.style.display="none"
+                btn3.style.display="block"
+            
+            } else {
+                error2.innerText="Please enter your email";
+        }}
+
+        function display3(){
+            if(username.value){
+                step3.style.display = "block";  
+                step4.style.display = "block"; 
+                btn3.style.display="none"
+                btn4.style.display="block"
+            
+            } else {
+                error2.innerText="Please enter your password";
+            }
+        }
+
+
+        var my
+        function display4(){
+
+        console.log(username.value)
+        console.log(email.value)
+        console.log(pass.value)
+        console.log(cpass.value)
+
+        }
+        
+        
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#top{
+    height: 20%;
+    background-color: aqua;
+    display: flex;
+    justify-content:space-between;
+    padding: auto;
+    border-radius: 10px;
+}
+#left{
+ width: 30%;
+ height: 700px;
+ background-color: rgb(138, 123, 100);
+ border-radius: 10px;
+}
+
+#right{
+    width: 70%;
+    height: 700px;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+img{
+        height: 50px;
+        padding-top: 5px;
+        padding-right: 10px;
+        border-radius: 20px;
+    }
+   h{
+    padding-left: 10px;
+   }
+   #bottom{
+    display: flex;
+   }
+   fieldset{
+    height:700px ;
+
+   }
+   #form{
+
+   }
+   input{
+    margin-left: 50px;
+    margin-top: 10px;
+    height: 30px;
+    width: 200px;
+   }
+   label{
+    margin-left: 20px;
+    margin-top: 10px;
+   }
+  #cp{
+    width: 150px;
+   }
+    </style>
+    
+</head>
+<body>
+    <div id="full-screen">
+        <div id="top">
+            <h1>IARE</h1>
+            <div id="profile"></div>
+            <img src="profile.jpg" alt="profile">
+
+        </div>
+        <div id="bottom">
+            <div id="left">
+                <h1>sign-up</h1>
+                <h1>Login</h1>
+                <h1>home</h1>
+                <h1>payments</h1>
+                <h1>Time-table</h1>
+                <h1>Results</h1>
+                <h1>Documents</h1>
+                <h1>Assignments</h1>
+            
+            </div>
+            <div id="right">
+                <div id="form">
+                <form>
+                    <fieldset>
+                    <div id="name">
+                    <label for="">Name :</label>
+                    <input type="text" name="" id="">
+                   </div>
+                <div id="password">
+                    <label for="">Password :</label>
+                    <input type="password" name="" id="">
+                </div>
+                <div id="con-password">
+                    <label for="">Confrim-password :</label>
+                    <input type="password" name="" id="cp">
+                </div>
+                <div id="email">
+                    <label for="">Email :</label>
+                    <input type="email" name="" id="">
+                </div>
+                <div id="number">
+                    <label for="">Number :</label>
+                    <input type="number" name="" id="">
+                </div>
+                <div id="gender">
+                    <h2>select gender</h2>
+                    <input type="radio" name="" id="">
+                    <label for="">male</label><br>
+                    <input type="radio" name="" id="">
+                    <label for="">Female</label><br>
+                    <input type="radio" name="" id="">
+                    <label for="">others</label>
+                </div>
+                <div id="submit">
+                    <input type="submit" value="Submit" >
+
+                </div>
+                </form>
+            </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

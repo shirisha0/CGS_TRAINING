@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color:NONE;
+    }
+    
+    li {
+      float:right;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover {
+      background-color: rgb(234, 228, 228);
+    }
+    #form{
+      background-color: rgb(191, 117, 117);
+      width:300px;
+      height:400px;
+      padding: 4px;
+      margin-left:20%;
+      margin-top: 10%;
+
+    }
+    h3{
+      width:150;
+      color: darkgrey;
+      text-align: center;
+      margin-top: 20%;
+    }
+input{
+  margin:5px;
+  margin-left:15px;
+  height:30px;
+  color:aliceblue;
+  width:90%;
+
+}
+#submit{
+  color: rgb(125, 118, 118);
+
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
+</head>
+<body style="background-image:url('image2.jpg'); background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
+<UL><LI><a class="active" href="#home"></a></LI>
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#FEATURES">FEATURES</a></li>
+<li><a href="#PORTFOLIO">PORTFOLIO</a></li>
+<li><a href="#TEAM">TEAM</a></li>
+<li><a href="#BLOG">BLOG</a></li>
+<li><a href="#CONTACT">CONTACT</a></li>
+<li><a href="#PAGES">PAGES</a></li>
+<h2 style="text-align:left;color:aliceblue">TETRA</h2>
+</UL>
+<div class="row">
+<div class="column" style="background-color: none;">
+<H3 STYLE="TEXT-ALIGN:center;color: aliceblue;">WE CREATE AWESOME DESIGNS</H3>
+<h1 style="color:aliceblue;text-align: center;">Make your ideas a reality.Start your <br>bussiness with Tetra</h1> 
+<center>
+<input type="sbmit" value="GET STARTED NOW" style="background: none ;color: aliceblue;width:25%;">
+</center>
+</div>
+<div class="column" style="background-color:none">
+<div id="form">
+<form>
+
+    <h3 style="color: aliceblue;">SIGN TO FIND OUT MORE:</h3><BR>
+    <input type="text" value="your name" style="color: darkgrey;"><br>
+    <input type="text" value="your email"style="color: darkgrey;"><br>
+    <input type="text" value="Home number"style="color: darkgrey;"><br>
+    <center>
+      <input type="submit" value="REGISTER NOW" id="submit">
+    </center>
+    
+    <p style="color:aliceblue"><b style="color: aliceblue;text-align: center;">Terms of Service </b> and <b style="color:aliceblue;text-align:center;">Privacy Policy</b></p>
+</form>
+</div>
+</div>
+</body>
+</html>
