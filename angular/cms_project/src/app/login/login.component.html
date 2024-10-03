@@ -1,0 +1,62 @@
+<div class="container-fluid d-flex align-items-center" id="main">
+    <div class="row w-100">
+        <div class="col-lg-6 col-md-12 d-flex ml-5 justify-content-center align-items-center " id="leftbar">
+            <div>
+                <img src="assets/images/cms_logo.png" alt="Google Logo" class="mx-0" style="width:500px; height: 400px; box-shadow: 10px dimgray;">
+                <div class=" text-center mt-3">
+                    <h3>Sign In</h3>
+                    <h6>to continue to CMS</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 d-flex align-items-center" id="rightbar">
+
+                <form id="form" class="mb-4 w-100" #reg="ngForm" (ngSubmit)="disfun(reg)">
+                    <div class="form-group input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text pb-3"><i class="fa fa-envelope pt-1"></i></span>
+                        </div>
+                        <input id="email" name="username" class="form-control" placeholder="User Name" type="name"  [(ngModel)]="details.name" required>
+                    </div>
+                   
+                    <div class="form-group input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text pb-3"><i class="fa fa-lock pt-1"></i></span>
+                        </div>
+                        <input id="pass" type="password" class="form-control" placeholder="Enter password" name="pass" [(ngModel)]="details.pass"  >
+                    </div>
+                    <div >
+                        <p id="error" style="color: red;"></p>
+                    </div>
+                    <div class="form-group mt-3  pb-2">
+                        <span class="  ">Login As</span>
+
+                        <label class="form-check form-check-inline">
+                            <input id="admin" class="form-check-input mx-2" type="radio" name="role" value="admin" [(ngModel)]="details.role"required>
+                            <span for="admin" class="form-check-label pe-3"> Admin </span>
+                        </label>
+                        <label class="form-check form-check-inline">
+                            <input id="employee" class="form-check-input" type="radio" name="role" value="employee" [(ngModel)]="details.role" required >
+                            <span for="employee" class="form-check-label">Employee</span>
+                        </label>
+                    
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="m-0 p-0"><a href="#">Forgot Email?</a></h6>
+                    </div>
+                   
+                    <div class="text-center">
+                        <button class="btn btn-outline- mx-3" style="border-radius: 2vw;"><a  routerLink="/register"> creat account</a></button>
+                        <button  id="btn"  class="btn btn-primary mx-3" style="border-radius: 2vw;"  type="submit" >Login</button>
+
+                    </div>
+                </form>
+                
+           
+        </div>
+    </div>
+
+</div>
+
+
+

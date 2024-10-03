@@ -118,7 +118,7 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    
+   
     <script>
         // Retrieve the username from localStorage
     const username = localStorage.getItem('username');
@@ -126,7 +126,7 @@
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
     if (username && role === 'admin') {
-        document.getElementById('welcomeMessage').textContent = `Welcome, ${username}`;
+        document.getElementById('welcomeMessage').textContent = Welcome, ${username};
         if (isLoggedIn=='true'){
     
             Toastify({
@@ -147,5 +147,6 @@
         // Show toast using Toastify
         
       </script>
+    
 </body>
 </html>

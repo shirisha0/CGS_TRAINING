@@ -1,0 +1,99 @@
+<div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar text-white p-3">
+        <h2 class="text-center">Admin Dashboard</h2>
+        <hr />
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin">Dashboard</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin-compliance-policies">Compliance Policies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin-audit-management">Audit Management</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin-reports">Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin-setting">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/emp-profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin-logout">Logout</a>
+          </li>
+        </ul>
+      </nav>
+  
+  
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <!-- Header -->
+        <header class="py-4">
+            <h1>Reports</h1>
+            <p>View and download compliance reports.</p>
+        </header>
+
+        <!-- Search and Filter -->
+        <div class="mb-4">
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="searchReport" placeholder="Search reports">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" id="filterDate">
+                        <option selected>Filter by Date</option>
+                        <option value="last7days">Last 7 Days</option>
+                        <option value="last30days">Last 30 Days</option>
+                        <option value="thisYear">This Year</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary">Apply Filters</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Reports List Section -->
+        <section>
+            <h2>Available Reports</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Report Name</th>
+                        <th>Description</th>
+                        <th>Date Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Annual Compliance Report</td>
+                        <td>Yearly compliance report summarizing all compliance activities.</td>
+                        <td>2024-08-30</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Monthly Audit Summary</td>
+                        <td>Summary of all audits conducted in the past month.</td>
+                        <td>2024-08-15</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Quarterly Policy Review</td>
+                        <td>Review of compliance policies updated during the last quarter.</td>
+                        <td>2024-07-25</td>
+                    </tr>
+                    <!-- Add more report rows as needed -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+          </div>
+      </div>
+      

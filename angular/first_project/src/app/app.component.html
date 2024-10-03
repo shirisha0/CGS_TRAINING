@@ -1,0 +1,90 @@
+
+  <div class="text-center">
+    <h1 class="text-lg-center">VOTE GAME</h1>
+      <div class="d-flex mx-4 text-center">
+          
+            <div class="shadow-lg p-3 mb-5 bg-light rounded mx-lg-4 my-lg-4 " style="width: 300px; ">
+              
+              <div class="card-body">
+                  <h1 class="text-center">BRS</h1>
+                  <img src="BRS.jpg" alt="" class="text-center" style="border-radius: 10px; height: 200px;">
+                  <div class="p-4">
+                    <h1 class="text-center" id="s1">{{dic[0].vote}}</h1>
+                  </div>
+                  <h5 class="text-center">Score</h5>
+                  <div class=" text-center my-lg-5 " id="btn1">
+                      <button class="btn btn-lg bg-info" id="btn1" ds="s1" (click)="vote1()">Vote</button>
+      
+                    </div>
+              
+              </div>
+              
+            </div>
+    
+              <div class="shadow-lg p-3 mb-5 bg-light rounded mx-lg-4 my-lg-4" style="width: 300px; ">
+                <div class="card-body">
+                    <h1 class="text-center">Congress</h1>
+                    <img src="congress.svg" class="text-center" alt="" style="border-radius: 10px; height: 200px;">
+                    <div class="p-4">
+                    <h1 class="text-center" id="s2">{{dic[1].vote}}</h1>
+                  </div>
+                  <h5 class="text-center">Score</h5>
+                    <div class=" text-center my-lg-5 ">
+                        <button class="btn btn-lg bg-info" id="btn2" ds="s2" (click)="vote2()">Vote</button>
+        
+                       
+                    </div>
+                
+                </div>
+                
+              </div>
+            
+              <div class="shadow-lg p-3 mb-5 bg-light rounded mx-lg-4 my-lg-4 " style="width: 300px; ">
+                
+                <div class="card-body">
+                    <h1 class="text-center">BJP</h1>
+                    <img src="bjp.jpg" alt=""  class="text-center" style="border-radius: 300px; height: 200px;">
+                    <div class="p-4">
+                      <h1 class="text-center" id="s3">{{dic[2].vote}}</h1>
+                    </div>
+                    <h5 class="text-center">Score</h5>
+                    <div class=" text-center my-lg-5 ">
+                        <button class="btn btn-lg bg-info" id="btn3" ds="s3" (click)="vote3()">Vote</button>
+        
+                       
+                    </div>
+                
+                </div>
+                
+              </div>
+  
+              <div class="shadow-lg p-3 mb-5 bg-light rounded mx-lg-4 my-lg-4" style="width: 300px; ">
+                
+                <div class="card-body">
+                    <h1 class="text-center">CP</h1>
+                    <img src="cp.jpg" alt="" class="text-center" style="border-radius: 10px; height: 225px;">
+                    <div class="p-4">
+                    <h1 class="text-center" id="s4">{{dic[3].vote}}</h1>
+                  </div>
+                  <h5 class="text-center">Score</h5>
+                    <div class=" text-center my-lg-5 ">
+                        <button class="btn btn-lg bg-info" id="btn4" ds="s4" (click)="vote4()">Vote</button>
+        
+                       
+                    </div>
+                
+                </div>
+                
+              </div>
+
+              
+      </div>
+      <div class="text-center">
+      <button class="btn btn-lg bg-success text-center" (click)="dis()">Display-button</button>
+      </div>
+      
+  </div>
+  <script >
+    
+</script>
+  

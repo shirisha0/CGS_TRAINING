@@ -1,0 +1,109 @@
+<div class="container-fluid"></div>
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar text-white p-3" style="height: 100vh; position: sticky; top: 0; overflow-y: scroll;">
+        <h2 class="text-center">Admin Dashboard</h2>
+        <hr />
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin">Dashboard</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin-compliance-policies">Compliance Policies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin-audit-management">Audit Management</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin-reports">Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin-setting">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/emp-profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin-logout">Logout</a>
+          </li>
+        </ul>
+      </nav>
+  
+    
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <!-- Header -->
+          <header class="py-4">
+              <h1>Settings</h1>
+              <p>Configure system settings for the Compliance Management System.</p>
+          </header>
+      
+          <!-- General Settings -->
+          <section class="mb-5">
+              <h2>General Settings</h2>
+              <form (ngSubmit)="saveGeneralSettings()">
+                  <div class="mb-3">
+                      <label for="siteName" class="form-label">Site Name</label>
+                      <input type="text" class="form-control" id="siteName" [(ngModel)]="siteName" name="siteName" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="siteEmail" class="form-label">Site Email</label>
+                      <input type="email" class="form-control" id="siteEmail" [(ngModel)]="siteEmail" name="siteEmail" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="siteTimezone" class="form-label">Timezone</label>
+                      <select class="form-select" id="siteTimezone" [(ngModel)]="siteTimezone" name="siteTimezone" required>
+                          <option selected disabled>Choose Timezone</option>
+                          <option value="UTC">UTC</option>
+                          <option value="GMT">GMT</option>
+                          <option value="PST">PST</option>
+                          <!-- Add more timezones as needed -->
+                      </select>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Save Changes</button>
+              </form>
+          </section>
+      
+          <!-- User Management Settings -->
+          <section class="mb-5">
+              <h2>User Management</h2>
+              <form (ngSubmit)="updateUserManagementSettings()">
+                  <div class="mb-3">
+                      <label for="userRole" class="form-label">Default User Role</label>
+                      <select class="form-select" id="userRole" [(ngModel)]="defaultUserRole" name="userRole" required>
+                          <option selected disabled>Choose Role</option>
+                          <option value="Admin">Admin</option>
+                          <option value="User">User</option>
+                          <option value="Manager">Manager</option>
+                      </select>
+                  </div>
+                  <div class="mb-3">
+                      <label for="passwordPolicy" class="form-label">Password Policy</label>
+                      <input type="text" class="form-control" id="passwordPolicy" [(ngModel)]="passwordPolicy" name="passwordPolicy" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Update Settings</button>
+              </form>
+          </section>
+      
+          <!-- Security Settings -->
+          <section class="mb-5">
+              <h2>Security Settings</h2>
+              <form (ngSubmit)="saveSecuritySettings()">
+                  <div class="mb-3">
+                      <label for="twoFactorAuth" class="form-label">Two-Factor Authentication</label>
+                      <select class="form-select" id="twoFactorAuth" [(ngModel)]="twoFactorAuth" name="twoFactorAuth" required>
+                          <option selected disabled>Enable/Disable</option>
+                          <option value="enabled">Enabled</option>
+                          <option value="disabled">Disabled</option>
+                      </select>
+                  </div>
+                  <div class="mb-3">
+                      <label for="sessionTimeout" class="form-label">Session Timeout (minutes)</label>
+                      <input type="number" class="form-control" id="sessionTimeout" [(ngModel)]="sessionTimeout" name="sessionTimeout" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Save Security Settings</button>
+              </form>
+          </section>
+      </main>
+      

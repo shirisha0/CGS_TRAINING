@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="class-body">
+   <div class="row">
+    <div class="col-md-6">
+  <app-task-form  (addtask)="add_task($event)" ></app-task-form>
+
+    </div>
+    <div class="col-md-6">
+        <app-task-listing [listing]="tasks"></app-task-listing>
+    </div>
+   </div>
+    </div>
+</div>

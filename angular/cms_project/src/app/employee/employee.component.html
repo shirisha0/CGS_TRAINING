@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar text-white p-3">
+      <h2 class="text-center">Employee Dashboard</h2>
+      <hr />
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link text-white active" routerLink="/employee">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/emp-compliance-task">Compliance Tasks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/emp-my-audits">My Audits</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/emp-logout">Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="height: 100vh; position: sticky; top: 0; overflow-y: scroll;">
+      <!-- Header -->
+      <header class="d-flex justify-content-between align-items-center py-4">
+        <div>
+          <h1 id="welcomeMessage">Welcome, employee</h1>
+          <p>Here’s an overview of your compliance activities and upcoming tasks.</p>
+        </div>
+      </header>
+
+      <!-- Dashboard Overview -->
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <canvas id="myChart" class="chart-container"></canvas> <!-- Using CSS class -->
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

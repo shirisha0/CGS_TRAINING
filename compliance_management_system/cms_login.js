@@ -52,7 +52,7 @@ function display(event) {
             localStorage.setItem('isLoggedIn', 'true');
             
             // Redirect to admin dashboard
-            window.location.href = 'chatgpt_cms/admin_user/admin.html';
+            window.location.href = 'project_cms/admin_user/admin.html';
         } else {
             error.innerText = "Invalid admin credentials";
         }
@@ -66,7 +66,7 @@ function display(event) {
             localStorage.setItem('isLoggedIn', 'true');
             
             // Redirect to employee dashboard
-            window.location.href = 'chatgpt_cms/emp_cms/employee_dash_new.html';
+            window.location.href = 'project_cms/emp_cms/employee_dash_new.html';
         } else {
             error.innerText = "Invalid employee credentials";
         }

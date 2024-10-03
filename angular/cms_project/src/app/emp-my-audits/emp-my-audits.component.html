@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar text-white p-3">
+      <h2 class="text-center">Employee Dashboard</h2>
+      <hr />
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link text-white active" routerLink="/employee">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/emp-compliance-task">Compliance Tasks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/emp-my-audits">My Audits</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/emp-logout">Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <!-- Header -->
+      <header class="d-flex justify-content-between align-items-center py-4">
+        <div>
+          <h1>My Audits</h1>
+          <p>View and manage your upcoming and completed audits.</p>
+        </div>
+      </header>
+
+      <!-- Filter and Search -->
+      <!-- Filter and Search -->
+
+
+<!-- My Audits -->
+<!-- My Audits -->
+<section class="mb-5">
+  <h2>My Audits</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Audit Name</th>
+        <th>Department</th>
+        <th>Schedule Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let audit of filteredAudits; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ audit.auditName }}</td>  <!-- Update to 'auditName' -->
+        <td>{{ audit.department }}</td>
+        <td>{{ audit.dateScheduled | date: 'yyyy-MM-dd' }}</td>  <!-- Update to 'dateScheduled' -->
+        <td>{{ audit.status||'N/A' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+    </main>
+  </div>
+</div>

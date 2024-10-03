@@ -1,0 +1,77 @@
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <!-- Sidebar -->
+        <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar text-white p-3" style="height: 100vh; position: sticky; top: 0; overflow-y: scroll;">
+            <h2 class="text-center">Admin Dashboard</h2>
+            <hr>
+            <ul class="nav flex-column">
+                <!-- Use routerLink for Angular routing -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin">Dashboard</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin-compliance-policies">Compliance Policies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin-audit-management">Audit Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin-reports">Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin-setting">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/emp-profile">Profile</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin-logout">Logout</a>
+                </li>
+            </ul>
+        </nav>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <header class="d-flex justify-content-between align-items-center py-4">
+                    <div>
+                        <h1>
+                          Audit Management
+                          
+                          
+                          </h1>
+                        <p>View, Schedule, and Track Compliance Audits</p>
+                    </div>
+                    
+                </header>
+
+                <!-- Filter and Search -->
+                
+
+                <!-- My Audits List -->
+                
+
+                <!-- Schedule Audit Form -->
+                <section>
+                    <h2>Schedule an Audit</h2>
+                    <form [formGroup]="auditForm" (ngSubmit)="submitAudit()">
+                        <div class="mb-3">
+                            <label for="auditName" class="form-label">Audit Name</label>
+                            <input formControlName="auditName" type="text" class="form-control" id="auditName" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Department</label>
+                            <input formControlName="department" type="text" class="form-control" id="department" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="auditDate" class="form-label">Date Scheduled</label>
+                            <input formControlName="auditDate" type="date" class="form-control" id="auditDate" required />
+                        </div>
+                        <button type="submit" class="btn btn-primary" [disabled]="auditForm.invalid">Schedule Audit</button>
+                        <button type="button" class="btn btn-secondary" (click)="auditForm.reset()">Cancel</button>
+                    </form>
+                    
+                </section>
+            </main>
+        </div>
+    </div>
+
+    

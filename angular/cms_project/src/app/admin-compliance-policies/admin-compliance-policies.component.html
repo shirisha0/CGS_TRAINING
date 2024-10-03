@@ -1,0 +1,94 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar text-white p-3">
+      <h2 class="text-center">Admin Dashboard</h2>
+      <hr />
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin">Dashboard</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin-compliance-policies">Compliance Policies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin-audit-management">Audit Management</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin-reports">Reports</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin-setting">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/emp-profile">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin-logout">Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+    
+        <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <!-- Header -->
+          <header class="py-4">
+            <h1>Compliance Policies</h1>
+            <p>Manage, add, and display compliance policies.</p>
+          </header>
+    
+          <!-- Add Policy Form -->
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Add New Policy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <form (ngSubmit)="addPolicy()">
+                  <div class="mb-3">
+                    <label for="policyName" class="form-label">Policy Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="newPolicy.name" name="policyName" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="policyDescription" class="form-label">Description</label>
+                    <textarea class="form-control" [(ngModel)]="newPolicy.description" name="policyDescription" rows="3" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Add Policy</button>
+                </form>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Policies List Section -->
+          <section class="mt-4">
+            <h2>Policies List</h2>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Policy Name</th>
+                  <th>Description</th>
+                  <th>Date Created</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let policy of policies; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ policy.name }}</td>
+                  <td>{{ policy.description }}</td>
+                  <td>{{ policy.dateCreated }}</td>
+                  <td>
+                    <button class="btn btn-sm btn-danger" (click)="deletePolicy(i)">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </main>
+      </div>
+    </div>
+    

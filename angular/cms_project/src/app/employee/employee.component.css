@@ -1,0 +1,8 @@
+nav{
+    height: 100vh;
+}
+.chart-container {
+    width: 1000px;   /* Set desired width */
+    height: 600px;  /* Set desired height */
+    max-width: 100%; /* Make it responsive */
+}

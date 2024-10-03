@@ -1,0 +1,93 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar text-white p-3">
+      <h2 class="text-center">Admin Dashboard</h2>
+      <hr />
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin-manageuser">Manage Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin-compliance-policies">Compliance Policies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin-audit-management">Audit Management</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin-reports">Reports</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin-setting">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/admin-logout">Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <header class="py-4">
+        <h1>Manage Users</h1>
+        <p>View, add, edit, and remove users from the system.</p>
+      </header>
+
+      <!-- Add New User Form -->
+      <form (ngSubmit)="addUser()">
+        <div class="mb-3">
+          <label for="userName" class="form-label">Name</label>
+          <input type="text" [(ngModel)]="newUser.name" name="name" class="form-control" id="userName" required>
+        </div>
+        <div class="mb-3">
+          <label for="userUsername" class="form-label">Username</label>
+          <input type="text" [(ngModel)]="newUser.username" name="username" class="form-control" id="userUsername" required>
+        </div>
+        <div class="mb-3">
+          <label for="userEmail" class="form-label">Email</label>
+          <input type="email" [(ngModel)]="newUser.email" name="email" class="form-control" id="userEmail" required>
+        </div>
+        <div class="mb-3">
+          <label for="userRole" class="form-label">Role</label>
+          <select class="form-select" [(ngModel)]="newUser.role" name="role" id="userRole" required>
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+            <option value="Manager">Manager</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Add User</button>
+      </form>
+
+      <!-- Users List Section -->
+      <section>
+        <h2>Users List</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.username }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.role }}</td>
+              <td>
+                <button class="btn btn-sm btn-danger" (click)="deleteUser(user)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</div>
